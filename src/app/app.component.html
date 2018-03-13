@@ -17,9 +17,19 @@
 <hr>
 <app-success-alert></app-success-alert>
 <hr>
-<p>DATA BINDING</p>
-<div class="app-servers"></div> 
+<!-- <p>DATA BINDING</p>
+<div class="app-servers"></div>  -->
 <hr>
+<hr>
+<label> User Name</label>
+<input type ="text"
+class = "form-control"
+[(ngModel)]= "userName">
+<p> {{userName}} </p>
+<button
+        class="btn btn-primary"
+        [disabled]="username === ''"
+        (click)="username = ''">Reset User</button>
 </div>
 </div>
 </div>
