@@ -27,9 +27,8 @@ class = "form-control"
 [(ngModel)]= "userName">
 <p> {{userName}} </p>
 <button
-        class="btn btn-primary"
-        [disabled]="username === ''"
-        (click)="username = ''">Reset User</button>
+        class="btn btn-primary" [disabled] = "userName ===''" (click) ="userName = ''"
+        >Reset User</button>
 </div>
 </div>
 </div>

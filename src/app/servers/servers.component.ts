@@ -14,17 +14,20 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = "No server";
   serverName ='Angular';
   userName ="********";
+  username: string = "****";
+  serverCreated = false;
 
   constructor() { 
     setTimeout(() =>
       this.allowNewServer = true ,2000);
     console.log(this.allowNewServer)
-  }
+  } 
 
   ngOnInit() {
   }
 
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
 
   }
