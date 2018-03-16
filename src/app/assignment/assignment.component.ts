@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment.component.css']
 })
 export class AssignmentComponent implements OnInit {
+secretShow = false;
+log = [];
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onToggle() {
+    this.secretShow = !this.secretShow;
+    this.log.push(this.log.length + 1);  }
 }

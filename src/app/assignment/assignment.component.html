@@ -1,5 +1,11 @@
 <p>1. Add a button which says 'Display Button'.</p>
 <p>2. Add a paragraph with any content of your choice. </p>
 <p>3. Toggle the displaying of the text with the button created on the first step.</p>
-<p>4. log all  buttons click in any array and output the array below the secret paragraph</p>
+<p>4. log all buttons click in any array and output the array below the secret paragraph</p>
 <p>5. Starting at the 5th log time, give all future log items in blue background(ngStytle) and white text(ngClass)</p>
+<hr>
+<button class = " btn btn-primary " (click) = "onToggle()" >Dispaly button</button>
+<p *ngIf = "secretShow" >March 16, Kosen-rufu Day. The spirit of this day lies not in magnificent ceremonies or high-sounding words. It lies in being victorious. That is the most crucial thing in all endeavors. In life and in kosen-rufu, we either win or lose. I would like you to be absolute victors in both. No matter what excuses we try to make, giving in to defeat brings misery and loses us the respect of others. I hope each of you without exception will adorn your life with indestructible triumph.
+</p>
+<div *ngFor = "let logItem of log"
+[ngStyle] = " {backgroundColor : logItem >5 ? 'blue' : 'transparent'} " > {{logItem}} </div>
